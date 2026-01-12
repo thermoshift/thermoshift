@@ -136,7 +136,7 @@
         html {
             background: var(--bg-primary);
             background-image: 
-                radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0),
+                radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0),
                 radial-gradient(ellipse at top, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
                 radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
             background-size: 20px 20px, 100% 100%, 100% 100%;
@@ -2311,7 +2311,7 @@
             root.style.setProperty('--gradient-end', colors.gradientEnd);
 
             // Update html background gradients (single continuous background for all sections)
-            const dotColor = isLightMode ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.03)';
+            const dotColor = isLightMode ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.055)';
             const ellipseOpacity = isLightMode ? '0.06' : '0.06';
             
             document.documentElement.style.backgroundImage = `

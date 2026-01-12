@@ -1729,10 +1729,7 @@
             }
 
             .hero-animation-column {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-top: 40px;
+                display: none;
             }
 
             .theme-toggle-container {
@@ -1980,12 +1977,19 @@
                 With the rise of intermittent <span class="highlight-text">renewable energy</span> sources, energy storage is the key to balance the grid.<br>
                 For thermal applications, thermal batteries are generally more <span class="highlight-text">cost-effective</span> and <span class="highlight-text">sustainable</span> than electrochemical batteries,<br>but are harder to optimize for electricity markets.<br><br>
                 <span class="highlight-text" style="font-size: 1.5rem; font-weight: 600;">ThermoShift is changing that.</span> -->
-                50% of the world's final energy use is for heating or cooling, mainly for buildings and industry. 
-                Cooling demand is increasing worldwide (warming temperatures, datacenters, etc.) and heating is increasingly electrified through heat pumps.<br><br> 
+                <!-- 50% of the world's final energy use is for heating or cooling, mainly for buildings and industry. 
+                On top of that, cooling demand is increasing worldwide (warming temperatures, datacenters, etc.) and heating is increasingly electrified through heat pumps.<br><br> 
                 With the rise of intermittent renewable energy sources like wind and solar, energy storage with smart control is the key to balance the grid. 
-                For many applications, thermal batteries are more cost-effective and sustainable than electrochemical batteries: 
+                For many applications where thermal energy is the final product, thermal batteries are far more cost-effective and sustainable than electrochemical batteries: 
                 they rely on abundant materials, avoid rare metals, experience virtually no cycling degradation, and pose no fire risk.<br><br>
-                However, they are inherently harder to optimize for electricity markets.
+                However, thermal batteries are inherently harder to model and optimize for electricity markets. -->
+                Around 50% of the world's final energy use goes to heating and cooling, mainly in buildings and industry. 
+                At the same time, cooling demand is rising globally (driven by warming temperatures, data centers, and electrification), 
+                while heating is increasingly electrified through heat pumps.<br><br>
+                With the growing share of intermittent renewable generation from wind and solar, smartly controlled energy storage is essential to balance the grid. 
+                For applications where the final energy use is thermal, thermal batteries are generally far more cost-effective and sustainable than 
+                electrochemical batteries: they use abundant materials, avoid critical raw materials, experience virtually no cycling degradation, and pose no fire risk.<br><br>
+                Yet thermal batteries are inherently harder to model and optimize for electricity markets.
                 <span class="highlight-text">ThermoShift is changing that.</span><br><br>
 
                 <p class="section-label">Potential applications</p>
@@ -2115,7 +2119,7 @@
                     <div class="tech-card-cursor-effect"></div>
                     <p class="tech-card-label">Step 3</p>
                     <h3>You save as we optimize</h3>
-                    <p>We continuously optimize your asset across multiple electricity markets and for HVAC performance, maximizing cost savings while ensuring thermal comfort.</p>
+                    <p>We continuously optimize your asset across multiple electricity markets and for HVAC performance and lifetime, maximizing cost savings while ensuring your thermal needs are met.</p>
                 </div>
             </div>
         </div>
@@ -2131,7 +2135,7 @@
                 <div class="sites-number">6</div>
                 <p class="sites-label">installations currently managed by ThermoShift</p>
             </div>
-            <p class="section-subtitle">Ready to optimize your thermal energy storage and want to learn more?<br>Let's discuss your project.</p>
+            <p class="section-subtitle">Ready to contribute to the energy transition and cut your electricity costs? Let's discuss your project.</p>
             <div class="contact-content fade-in" style="text-align: center; margin-top: 40px;">
                 <a href="#contact" class="btn btn-primary">Book a demo →</a>
             </div>

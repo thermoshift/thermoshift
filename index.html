@@ -16,9 +16,9 @@
         }
 
         :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #111111;
-            --bg-card: #151515;
+            --bg-primary: #141414;
+            --bg-secondary: #1a1a1a;
+            --bg-card: #1f1f1f;
             --text-primary: #ffffff;
             --text-secondary: #a0a0a0;
             --accent: #3b82f6;
@@ -41,10 +41,8 @@
         [data-theme="light"] html {
             background: var(--bg-primary);
             background-image: 
-                radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.08) 1px, transparent 0),
-                radial-gradient(ellipse at top, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
-            background-size: 20px 20px, 100% 100%, 100% 100%;
+                radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.08) 1px, transparent 0);
+            background-size: 20px 20px;
             background-attachment: fixed;
         }
 
@@ -142,10 +140,8 @@
         html {
             background: var(--bg-primary);
             background-image: 
-                radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0),
-                radial-gradient(ellipse at top, rgba(59, 130, 246, 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom, rgba(139, 92, 246, 0.06) 0%, transparent 50%);
-            background-size: 20px 20px, 100% 100%, 100% 100%;
+                radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.07) 1px, transparent 0);
+            background-size: 20px 20px;
             background-attachment: fixed;
             min-height: 100%;
         }
@@ -161,7 +157,7 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 64px;
         }
 
         /* Navigation */
@@ -175,6 +171,31 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav-contact-btn {
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid var(--text-secondary);
+            background: transparent;
+            color: var(--text-secondary);
+        }
+
+        .nav-contact-btn:hover {
+            color: var(--text-primary);
+            border-color: var(--text-primary);
         }
 
         .logo {
@@ -228,12 +249,34 @@
             gap: 10px;
         }
 
+        /* Hero Animation Container */
+        .hero-animation-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0px;
+            position: relative;
+        }
+
+        [data-theme="light"] .hero-animation-container {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
         /* Theme Toggle */
         .theme-toggle-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 0;
             order: 1;
+            width: 100%;
         }
 
         .hero-animation-column .battery-animation {
@@ -300,7 +343,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 0 80px;
+            padding: 0px 0 80px;
             background: transparent;
             position: relative;
         }
@@ -318,11 +361,11 @@
         }
 
         .hero h1 {
-            font-size: clamp(2rem, 3.5vw, 3rem);
-            font-weight: 800;
+            font-size: clamp(2.25rem, 4vw, 3.5rem);
+            font-weight: 500;
             margin-bottom: 24px;
-            line-height: 1.2;
-            letter-spacing: -1px;
+            line-height: 1.3;
+            letter-spacing: -0.3px;
             color: var(--text-primary);
         }
 
@@ -344,10 +387,10 @@
             text-decoration: none;
             color: var(--text-secondary);
             transition: all 0.3s ease;
-            padding: 10px 16px;
+            padding: 8px 14px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 24px;
+            border-radius: 22px;
             backdrop-filter: blur(10px);
         }
 
@@ -357,7 +400,7 @@
         }
 
         .hero-epfl-logo {
-            height: 1.1em;
+            height: 1em;
             width: auto;
             opacity: 0.9;
             vertical-align: middle;
@@ -386,7 +429,7 @@
             justify-content: center;
             gap: 50px;
             height: 100%;
-            min-height: 400px;
+            min-height: 300px;
         }
 
         /* Heat Pump */
@@ -842,19 +885,19 @@
         }
 
         .section-title {
-            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-            font-weight: 700;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 500;
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 36px;
             color: var(--text-primary);
-            letter-spacing: -1px;
+            letter-spacing: -0.3px;
         }
 
 
         #technology .section-title {
-            font-size: 36px;
+            font-size: 32px;
             text-align: left;
-            margin-bottom: 12px;
+            margin-bottom: 36px;
         }
 
         #technology .section-label {
@@ -876,9 +919,9 @@
         }
 
         #how-it-works .section-title {
-            font-size: 36px;
+            font-size: 32px;
             text-align: left;
-            margin-bottom: 12px;
+            margin-bottom: 0px;
         }
 
         #how-it-works .section-label {
@@ -900,9 +943,9 @@
         }
 
         #our-vision .section-title {
-            font-size: 36px;
+            font-size: 32px;
             text-align: left;
-            margin-bottom: 12px;
+            margin-bottom: 36px;
         }
 
         #our-vision .section-label {
@@ -931,7 +974,7 @@
         }
 
         .application-box {
-            padding: 32px 25px;
+            padding: 24px 20px;
             background: var(--bg-card);
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -940,7 +983,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 13px;
             position: relative;
             overflow: hidden;
         }
@@ -974,15 +1017,15 @@
         }
 
         .application-icon {
-            font-size: 2.5rem;
+            font-size: 2.1rem;
             color: var(--accent);
             margin-bottom: 0;
         }
 
         .application-label {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.65;
             margin: 0;
             font-weight: 400;
         }
@@ -1089,6 +1132,302 @@
         }
 
         /* Technology Section */
+        .product-image-container {
+            margin: 60px 0 80px 0;
+            text-align: center;
+        }
+
+        .product-image {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        @media (min-width: 769px) {
+            .product-image {
+                max-width: 950px;
+            }
+        }
+
+        .product-image-caption {
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Fake UI Container */
+        .fake-ui-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(10px);
+        }
+
+        [data-theme="light"] .fake-ui-container {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .fake-ui-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 28px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: relative;
+        }
+
+        .fake-ui-topbar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+        }
+
+        .fake-ui-left {
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .fake-ui-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .fake-ui-toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+        .fake-ui-toggle-label {
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .fake-ui-toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 52px;
+            height: 28px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .fake-ui-toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .fake-ui-toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--border);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 14px;
+        }
+
+        .fake-ui-toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 3px;
+            bottom: 3px;
+            background-color: #ffffff;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.15);
+        }
+
+        [data-theme="light"] .fake-ui-toggle-slider {
+            background-color: #e0e0e0;
+        }
+
+        .fake-ui-toggle-switch input:checked + .fake-ui-toggle-slider {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .fake-ui-toggle-switch input:checked + .fake-ui-toggle-slider:before {
+            transform: translateX(24px);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        [data-theme="light"] .fake-ui-toggle-switch input:checked + .fake-ui-toggle-slider {
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2), inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .fake-ui-content {
+            padding: 32px;
+            background: var(--bg-card);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px;
+        }
+
+        .fake-ui-content-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .fake-ui-content .product-image {
+            border-radius: 0;
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 769px) {
+            .fake-ui-content .product-image {
+                max-width: 900px;
+            }
+        }
+
+        .fake-ui-caption {
+            margin-top: 16px;
+            font-size: 0.8125rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            text-align: center;
+            align-self: center;
+        }
+
+        .fake-ui-stats {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 24px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            gap: 24px;
+        }
+
+        .fake-ui-stats-group {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+        }
+
+        .fake-ui-stat-separator {
+            width: 1px;
+            height: 16px;
+            background: var(--border);
+            flex-shrink: 0;
+            align-self: center;
+            margin: 0 4px;
+        }
+
+        .fake-ui-stat {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            flex-shrink: 0;
+            gap: 6px;
+        }
+
+        .fake-ui-stat-value {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            line-height: 1;
+            letter-spacing: -0.01em;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: baseline;
+        }
+
+        .fake-ui-stat-value sub {
+            vertical-align: baseline;
+            font-size: 0.7em;
+            line-height: 0;
+            position: relative;
+            bottom: -0.2em;
+        }
+
+        .fake-ui-stat-label {
+            font-size: 0.6875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+
+        .fake-ui-stat-date {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-right: 24px;
+            border-right: 1px solid var(--border);
+            flex-shrink: 0;
+            gap: 6px;
+        }
+
+        .fake-ui-stat-date-label {
+            font-size: 0.6875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            line-height: 1;
+        }
+
+        .fake-ui-stat-date-value {
+            font-size: 0.8125rem;
+            color: var(--text-primary);
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1;
+            padding: 4px 8px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .fake-ui-stat-date-value:hover {
+            border-color: var(--accent);
+            background: var(--bg-secondary);
+        }
+
+        .fake-ui-stat-date-connector {
+            font-size: 0.6875rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
         .technology-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1155,14 +1494,49 @@
             font-size: 1.3rem;
             margin-bottom: 12px;
             color: var(--text-primary);
-            font-weight: 600;
-            letter-spacing: -0.5px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
         }
 
         .tech-card p {
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.7;
+        }
+
+        .tech-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .tech-card ul li {
+            padding-left: 32px;
+            position: relative;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.7;
+        }
+
+        .tech-card ul li .check-icon {
+            position: absolute;
+            left: 0;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 1.5px solid var(--accent);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            flex-shrink: 0;
+            top: 0.4em;
+            background: transparent;
         }
 
         .tech-card .tech-card-label {
@@ -1306,7 +1680,7 @@
             font-size: 1.3rem;
             margin-bottom: 8px;
             color: var(--text-primary);
-            font-weight: 600;
+            font-weight: 500;
         }
 
         .team-card .role {
@@ -1326,6 +1700,10 @@
         .contact-content {
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .contact-content .cta-buttons {
+            justify-content: center;
         }
 
         .contact-form {
@@ -1682,17 +2060,48 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-text {
+                text-align: center;
+            }
+
+            .cta-buttons {
+                justify-content: center;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
-            .hero {
-                padding: 20px 0 60px;
+            .container {
+                padding: 0 36px;
             }
 
-            .theme-toggle-container {
-                margin-bottom: 30px;
+            .section-title {
+                font-size: clamp(1.5rem, 4vw, 2rem);
+            }
+
+            #technology .section-title,
+            #how-it-works .section-title,
+            #our-vision .section-title {
+                font-size: 28px;
+            }
+
+            .hero {
+                min-height: auto;
+                align-items: flex-start;
+                padding: 60px 0 60px;
+            }
+
+            nav {
+                padding: 15px 0;
             }
 
             .theme-option {
@@ -1769,41 +2178,39 @@
             }
 
             .application-box {
-                padding: 20px 16px;
+                padding: 18px 14px;
             }
 
             .application-icon {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
 
             .application-label {
-                font-size: 1.1rem;
+                font-size: 0.9rem;
                 font-weight: 400;
-                line-height: 1.7;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .hero-text {
-                text-align: center;
+                line-height: 1.6;
             }
 
             .hero-animation-column {
-                display: none;
+                display: flex;
+            }
+
+            .hero-animation-container {
+                padding: 24px 20px;
+                gap: 20px;
+                width: 100%;
+                max-width: 100%;
+                margin-top: 40px;
             }
 
             .theme-toggle-container {
                 display: flex;
-                order: 2;
-                margin-top: 30px;
+                order: 1;
                 margin-bottom: 0;
             }
 
             .hero-animation-column .battery-animation {
-                order: 1;
+                order: 2;
             }
 
             .battery-animation {
@@ -1909,7 +2316,7 @@
             }
 
             .hero-epfl-logo {
-                height: 1.1em;
+                height: 1em;
             }
 
             .hero-epfl-text {
@@ -1937,6 +2344,88 @@
             .mode-toggle {
                 width: auto;
             }
+
+            .fake-ui-container {
+                border-radius: 8px;
+            }
+
+            .fake-ui-topbar {
+                padding: 14px 16px;
+            }
+
+            .fake-ui-title {
+                font-size: 0.75rem;
+            }
+
+            .fake-ui-toggle-container {
+                gap: 10px;
+            }
+
+            .fake-ui-toggle-label {
+                font-size: 0.75rem;
+            }
+
+            .fake-ui-toggle-switch {
+                width: 48px;
+                height: 26px;
+            }
+
+            .fake-ui-toggle-slider:before {
+                height: 20px;
+                width: 20px;
+            }
+
+            .fake-ui-toggle-switch input:checked + .fake-ui-toggle-slider:before {
+                transform: translateX(22px);
+            }
+
+            .fake-ui-content {
+                padding: 20px 16px;
+                min-height: 300px;
+            }
+
+            .fake-ui-content-title {
+                font-size: 0.7rem;
+                margin-bottom: 16px;
+            }
+
+            .fake-ui-caption {
+                font-size: 0.75rem;
+                margin-top: 12px;
+            }
+
+            .fake-ui-stats {
+                padding: 12px 16px;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .fake-ui-stats-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .fake-ui-stat-separator {
+                display: none;
+            }
+
+            .fake-ui-stat {
+                align-items: center;
+            }
+
+            .fake-ui-stat-value {
+                font-size: 0.875rem;
+            }
+
+            .fake-ui-stat-date {
+                padding-right: 0;
+                padding-bottom: 12px;
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                align-items: center;
+            }
         }
 
         /* Smooth scroll */
@@ -1950,12 +2439,19 @@
     <nav>
         <div class="container">
             <div class="nav-content">
-                <div class="logo">ThermoShift</div>
-                <div class="nav-links">
-                    <a href="#our-vision">Vision</a>
-                    <a href="#technology">Product</a>
-                    <a href="#how-it-works">Process</a>
-                    <a href="#contact">Contact</a>
+                <div class="nav-left">
+                    <div class="logo">ThermoShift</div>
+                    <div class="nav-links">
+                        <a href="#technology">Product</a>
+                        <a href="#our-vision">Vision</a>
+                        <a href="#how-it-works">Process</a>
+                    </div>
+                </div>
+                <div class="hero-epfl-badge">
+                    <a href="https://www.epfl.ch/about/" target="_blank" rel="noopener noreferrer" class="hero-epfl-link">
+                        <img src="epfl.png" alt="EPFL" class="hero-epfl-logo">
+                        <span class="hero-epfl-text"> spin-off</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1964,61 +2460,149 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content fade-in">
+            <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Optimize Thermal Energy Storage Assets on Electricity Markets</h1>
-                    <p>We maximize the value of your Thermal Energy Storage System (TESS), significantly
-                        reducing your electricity bill and CO<sub>2</sub> emissions.</p>
+                    <h1>Optimize your thermal energy storage assets</h1>
+                    <p>ThermoShift optimizes the operation of thermal energy storage assets for participation in electricity markets,
+                        cutting energy costs and CO<sub>2</sub> emissions.</p>
                     <div class="cta-buttons">
-                        <div class="hero-epfl-badge">
-                            <a href="https://www.epfl.ch/about/" target="_blank" rel="noopener noreferrer" class="hero-epfl-link">
-                                <img src="epfl.png" alt="EPFL" class="hero-epfl-logo">
-                                <span class="hero-epfl-text"> spin-off</span>
-                            </a>
-                        </div>
                         <a href="https://calendly.com/th-defauw/new-meeting" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a demo →</a>
+                        <a href="mailto:example@example.com" class="nav-contact-btn">Contact us →</a>
                     </div>
                 </div>
                 <div class="hero-animation-column">
-                    <div class="theme-toggle-container">
-                        <div class="theme-toggle" id="theme-toggle">
-                            <div class="theme-slider"></div>
-                            <div class="theme-option" data-theme="cooling">Cooling</div>
-                            <div class="theme-option" data-theme="heating">Heating</div>
+                    <div class="hero-animation-container">
+                        <div class="theme-toggle-container">
+                            <div class="theme-toggle" id="theme-toggle">
+                                <div class="theme-slider"></div>
+                                <div class="theme-option" data-theme="cooling">Cooling</div>
+                                <div class="theme-option" data-theme="heating">Heating</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="battery-animation">
-                    <div class="heat-pump-container">
-                        <div class="heat-pump">
-                            <div class="heat-pump-flux charging"></div>
-                            <div class="heat-pump-horizontal-flux charging"></div>
-                            <div class="heat-pump-body">
-                                <div class="heat-pump-feet left"></div>
-                                <div class="heat-pump-feet right"></div>
-                                <div class="heat-pump-fan-area">
-                                    <div class="heat-pump-fan charging">
-                                        <div class="fan-blade"></div>
-                                        <div class="fan-blade"></div>
-                                        <div class="fan-blade"></div>
-                                        <div class="fan-blade"></div>
-                                        <div class="fan-hub"></div>
+                        <div class="battery-animation">
+                            <div class="heat-pump-container">
+                                <div class="heat-pump">
+                                    <div class="heat-pump-flux charging"></div>
+                                    <div class="heat-pump-horizontal-flux charging"></div>
+                                    <div class="heat-pump-body">
+                                        <div class="heat-pump-feet left"></div>
+                                        <div class="heat-pump-feet right"></div>
+                                        <div class="heat-pump-fan-area">
+                                            <div class="heat-pump-fan charging">
+                                                <div class="fan-blade"></div>
+                                                <div class="fan-blade"></div>
+                                                <div class="fan-blade"></div>
+                                                <div class="fan-blade"></div>
+                                                <div class="fan-hub"></div>
+                                            </div>
+                                        </div>
+                                        <div class="heat-pump-u-shape"></div>
                                     </div>
                                 </div>
-                                <div class="heat-pump-u-shape"></div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="battery-container">
-                        <div class="battery">
-                            <!-- <div class="battery-terminal"></div> -->
-                            <div class="battery-discharge-flux charging"></div>
-                            <div class="battery-body">
-                                <div class="battery-fill charging"></div>
+                            <div class="battery-container">
+                                <div class="battery">
+                                    <!-- <div class="battery-terminal"></div> -->
+                                    <div class="battery-discharge-flux charging"></div>
+                                    <div class="battery-body">
+                                        <div class="battery-fill charging"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology">
+        <div class="container">
+            <p class="section-label">Product</p>
+            <h2 class="section-title">Unlocking the potential of thermal storage</h2>
+            <p class="section-subtitle">
+                Thermal batteries offer major cost and sustainability benefits over traditional batteries, but their operation is inherently more complex: 
+                they are charged by HVAC, governed by thermodynamics, and coupled to thermal processes that must be managed.<br><br>
+
+                ThermoShift uses advanced optimization algorithms and forecasting to model and optimize the operation of thermal 
+                systems in real time, maximizing value across electricity markets, HVAC performance, and local self-consumption.
+            </p>
+            <div class="product-image-container">
+                <div class="fake-ui-container">
+                    <div class="fake-ui-topbar">
+                        <div class="fake-ui-left">
+                            <span class="fake-ui-title">Building 3A - Hot water storage</span>
+                        </div>
+                        <div class="fake-ui-toggle-container">
+                            <span class="fake-ui-toggle-label">Optimize</span>
+                            <label class="fake-ui-toggle-switch">
+                                <input type="checkbox" checked>
+                                <span class="fake-ui-toggle-slider"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="fake-ui-stats">
+                        <div class="fake-ui-stat-date">
+                            <span class="fake-ui-stat-date-label">From</span>
+                            <span class="fake-ui-stat-date-value">Jan 2024</span>
+                            <span class="fake-ui-stat-date-connector">to</span>
+                            <span class="fake-ui-stat-date-value">Jan 2025</span>
+                        </div>
+                        <div class="fake-ui-stats-group">
+                            <div class="fake-ui-stat">
+                                <span class="fake-ui-stat-value">-12,450 CHF</span>
+                            </div>
+                            <div class="fake-ui-stat-separator"></div>
+                            <div class="fake-ui-stat">
+                                <span class="fake-ui-stat-value">-28.3 tons CO<sub>2</sub></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fake-ui-content">
+                        <h3 class="fake-ui-content-title">Last 36 hours</h3>
+                        <img id="product-image" src="operation_fielddata_feb12_2025.png" alt="ThermoShift operation visualization showing heat pump power and electricity prices" class="product-image">
+                        <p class="fake-ui-caption">Real data from operating a heat pump and hot water storage system in a building</p>
+                    </div>
                 </div>
+            </div>
+            <div class="technology-grid">
+                <div class="tech-card fade-in">
+                    <div class="tech-card-cursor-effect"></div>
+                    <p class="tech-card-label">Cost-Effective</p>
+                    <h3>Save 20-40% on your energy costs</h3>
+                    <p>Shift loads to low-price periods and provide grid services while maintaining thermal constraints.</p>
+                </div>
+                <div class="tech-card fade-in">
+                    <div class="tech-card-cursor-effect"></div>
+                    <p class="tech-card-label">Sustainable</p>
+                    <h3>Reduce your carbon footprint</h3>
+                    <p>Maximize renewable energy use from the grid and self-consumption to meet your sustainability goals.</p>
+                </div>
+                <div class="tech-card fade-in">
+                    <div class="tech-card-cursor-effect"></div>
+                    <p class="tech-card-label">Compatible</p>
+                    <h3>Works with any thermal storage</h3>
+                    <p>Ice storage, chilled/hot water storage, PCMs (Phase Change Materials), and more.</p>
+                </div>
+                <div class="tech-card fade-in">
+                    <div class="tech-card-cursor-effect"></div>
+                    <p class="tech-card-label">Safe</p>
+                    <h3>Guaranteed thermal needs</h3>
+                    <p>Your thermal requirements always come before cost optimization.</p>
+                </div>
+                <div class="tech-card fade-in">
+                    <div class="tech-card-cursor-effect"></div>
+                    <p class="tech-card-label">Robust</p>
+                    <h3>Continuous optimization</h3>
+                    <p>Adapting in real-time to changes in system state, demand, prices, and local production.</p>
+                </div>  
+                <div class="tech-card fade-in">
+                    <div class="tech-card-cursor-effect"></div>
+                    <p class="tech-card-label">Transparent</p>
+                    <h3>Real-time monitoring</h3>
+                    <p>Track performance, savings, and emissions with live dashboards and periodic reports.</p>
+                </div>                
             </div>
         </div>
     </section>
@@ -2026,47 +2610,37 @@
     <!-- Our Vision Section -->
     <section id="our-vision">
         <div class="container">
-            <p class="section-label">Our Vision</p>
+            <p class="section-label">Vision</p>
             <h2 class="section-title">Thermal energy storage is the future</h2>
-            <div class="quote-box">
+            <!-- <div class="quote-box">
                 <div class="quote-box-cursor-effect"></div>
                 <blockquote class="quote-text">
                     "Heat and cold storage [...] is considered an important means for cheaply balancing high shares of fluctuating renewable electricity production."
                 </blockquote>
                 <p class="quote-attribution">— International Energy Agency (IEA)</p>
-            </div>
+            </div> -->
             <p class="section-subtitle">
-                <!-- <span class="highlight-text">50% of final energy</span> use is for heating or cooling, mainly for buildings and industry. <br>
-                Cooling <span class="highlight-text">demand is increasing</span> worldwide (datacenters, warming temperatures) and heating is increasingly <span class="highlight-text">electrified</span>.<br><br> 
-                With the rise of intermittent <span class="highlight-text">renewable energy</span> sources, energy storage is the key to balance the grid.<br>
-                For thermal applications, thermal batteries are generally more <span class="highlight-text">cost-effective</span> and <span class="highlight-text">sustainable</span> than electrochemical batteries,<br>but are harder to optimize for electricity markets.<br><br>
-                <span class="highlight-text" style="font-size: 1.5rem; font-weight: 600;">ThermoShift is changing that.</span> -->
-                <!-- 50% of the world's final energy use is for heating or cooling, mainly for buildings and industry. 
-                On top of that, cooling demand is increasing worldwide (warming temperatures, datacenters, etc.) and heating is increasingly electrified through heat pumps.<br><br> 
-                With the rise of intermittent renewable energy sources like wind and solar, energy storage with smart control is the key to balance the grid. 
-                For many applications where thermal energy is the final product, thermal batteries are far more cost-effective and sustainable than electrochemical batteries: 
-                they rely on abundant materials, avoid rare metals, experience virtually no cycling degradation, and pose no fire risk.<br><br>
-                However, thermal batteries are inherently harder to model and optimize for electricity markets. -->
-                Around 50% of the world's final energy use goes to heating and cooling, mainly in buildings and industry. 
-                At the same time, cooling demand is rising globally (driven by warming temperatures, data centers, and electrification), 
-                while heating is increasingly electrified through heat pumps.<br><br>
-                
-                <!-- With the growing share of intermittent renewable generation from wind and solar, smartly controlled energy storage is essential to balance the grid. 
-                For applications where the final energy use is thermal, thermal batteries are generally far more cost-effective and sustainable than 
-                electrochemical batteries: they use abundant materials, avoid critical raw materials, experience virtually no cycling degradation, and pose no fire risk. -->
+                50% of global energy goes to heating and cooling.<br>
+                In many applications, thermal storage is a better alternative to traditional batteries:
+                <div class="thermal-complexity-points">
+                    <div class="complexity-point">
+                        <span class="complexity-bullet">></span>
+                        <span class="complexity-text"><strong>Lower cost</strong> with abundant materials</span>
+                    </div>
+                    <div class="complexity-point">
+                        <span class="complexity-bullet">></span>
+                        <span class="complexity-text"><strong>No rare metals</strong>, limiting supply chain risks and mining impacts</span>
+                    </div>
+                    <div class="complexity-point">
+                        <span class="complexity-bullet">></span>
+                        <span class="complexity-text"><strong>No cycling degradation</strong>, consistent performance over decades</span>
+                    </div>
+                </div>
+                </p>
+                <p class="section-subtitle">
+                Thermal storage is complex to optimize for electricity markets. <span class="highlight-text">ThermoShift makes it simple.</span>
 
-                As the share of intermittent renewable generation from wind and solar increases, the need for flexibility grows accordingly,
-                driving the rapid deployment of energy storage systems. While electrochemical batteries have expanded quickly, they face well-known 
-                limitations in cost, material availability, and cycling degradation. In many applications where the final energy use is thermal, 
-                thermal energy storage offers a more cost-effective and sustainable alternative, relying on abundant materials, 
-                exhibiting negligible cycling degradation, and improved safety.
-
-                <br><br>
-                Yet thermal batteries are inherently harder to model and optimize for electricity markets.
-
-                <span class="highlight-text">ThermoShift is changing that.</span><br><br>
-
-                <p class="section-label">Examples of applications</p>
+                <p class="section-label" style="margin-top: 0px">Use cases</p>
                 <div class="applications-grid">
                     <div class="application-box">
                         <div class="application-box-cursor-effect"></div>
@@ -2113,78 +2687,6 @@
         </div>
     </section>
 
-    <!-- Technology Section -->
-    <section id="technology">
-        <div class="container">
-            <p class="section-label">Our Product</p>
-            <h2 class="section-title">Unlocking the potential of thermal storage</h2>
-            <p class="section-subtitle">
-                Thermal batteries hold the potential to generate real value across electricity markets, but are inherently more complex than electrochemical batteries.
-                <div class="thermal-complexity-points">
-                    <div class="complexity-point">
-                        <span class="complexity-bullet">></span>
-                        <span class="complexity-text"><strong>Charged by HVAC</strong> instead of electricity directly</span>
-                    </div>
-                    <div class="complexity-point">
-                        <span class="complexity-bullet">></span>
-                        <span class="complexity-text"><strong>Governed by complex thermodynamics</strong>, requiring sophisticated modeling and advanced optimization methods</span>
-                    </div>
-                    <div class="complexity-point">
-                        <span class="complexity-bullet">></span>
-                        <span class="complexity-text"><strong>Coupled to thermal processes</strong> that must be managed while participating in electricity markets</span>
-                    </div>
-                </div>
-            </p>
-            <p class="section-subtitle">
-                ThermoShift uses an advanced Model Predictive Control (MPC) framework that accurately models 
-                and optimizes the operation of complex thermal systems in real-time across electricity markets 
-                (day-ahead, intraday, and ancillary service markets) and HVAC performance (COP and short cycling).
-                We also integrate local self-consumption if available.
-            </p>
-            <div class="technology-grid">
-                <div class="tech-card fade-in">
-                    <div class="tech-card-cursor-effect"></div>
-                    <p class="tech-card-label">Cost-Effective</p>
-                    <h3>Save 20-40% on your energy costs</h3>
-                    <p>We use your thermal storage to provide grid services and shift heating and cooling loads to low-price periods, 
-                        while ensuring compliance with thermodynamic constraints.
-                    </p>
-                </div>
-                <div class="tech-card fade-in">
-                    <div class="tech-card-cursor-effect"></div>
-                    <p class="tech-card-label">Sustainable</p>
-                    <h3>Reduce your carbon footprint</h3>
-                    <p>By optimizing when your thermal storage charges and discharges, we maximize the use of renewable energy sources,
-                        both from the grid and from self-consumption. Achieve your carbon footprint reduction goals thanks to thermal storage.</p>
-                </div>
-                <div class="tech-card fade-in">
-                    <div class="tech-card-cursor-effect"></div>
-                    <p class="tech-card-label">Compatible</p>
-                    <h3>Works with a wide range of thermal energy storage technologies</h3>
-                    <p>Ice storage, chilled or hot water storage, Phase Change Materials (PCMs), and more.</p>
-                </div>
-                <div class="tech-card fade-in">
-                    <div class="tech-card-cursor-effect"></div>
-                    <p class="tech-card-label">Safe</p>
-                    <h3>Guaranteed thermal needs</h3>
-                    <p>Our optimization algorithms always guarantee your heating and cooling needs before cost optimization.</p>
-                </div>
-                <div class="tech-card fade-in">
-                    <div class="tech-card-cursor-effect"></div>
-                    <p class="tech-card-label">Robust</p>
-                    <h3>Continuous optimization</h3>
-                    <p>Our operation optimization algorithms are run continuously to account for the latest state of the system, demand forecasts, market price forecasts, and local production forecasts.</p>
-                </div>  
-                <div class="tech-card fade-in">
-                    <div class="tech-card-cursor-effect"></div>
-                    <p class="tech-card-label">Transparent</p>
-                    <h3>Real-time monitoring</h3>
-                    <p>We provide real-time dashboards and data visualization tools to track the performance of your asset, including cost savings and carbon emissions.</p>
-                </div>                
-            </div>
-        </div>
-    </section>
-
     <!-- EPFL Section -->
     <section class="epfl-section">
         <div class="container">
@@ -2200,29 +2702,38 @@
     <!-- How It Works Section -->
     <section id="how-it-works">
         <div class="container">
-            <p class="section-label">Our Process</p>
+            <p class="section-label">Process</p>
             <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">
-                We unlock the value of your Thermal Energy Storage System (TESS) on a wide range of electricity markets.
-            </p>
+            <!-- <p class="section-subtitle">
+                Unlock TESS value across electricity markets in three steps.
+            </p> -->
             <div class="technology-grid">
                 <div class="tech-card fade-in">
                     <div class="tech-card-cursor-effect"></div>
                     <p class="tech-card-label">Step 1</p>
                     <h3>We analyze your TESS</h3>
-                    <p>Our team evaluates your system to understand its characteristics and integration requirements, and provides an initial estimate of expected savings.</p>
+                    <ul>
+                        <li><i class="bi bi-check check-icon"></i>System evaluation and characteristics</li>
+                        <li><i class="bi bi-check check-icon"></i>Initial savings estimate</li>
+                    </ul>
                 </div>
                 <div class="tech-card fade-in">
                     <div class="tech-card-cursor-effect"></div>
                     <p class="tech-card-label">Step 2</p>
                     <h3>We integrate and test</h3>
-                    <p>We integrate with your HVAC controls and sensors to enable real-time monitoring and optimization, and perform a thorough testing phase.</p>
+                    <ul>
+                        <li><i class="bi bi-check check-icon"></i>HVAC controls and sensors integration</li>
+                        <li><i class="bi bi-check check-icon"></i>Testing phase</li>
+                    </ul>
                 </div>
                 <div class="tech-card fade-in">
                     <div class="tech-card-cursor-effect"></div>
                     <p class="tech-card-label">Step 3</p>
                     <h3>Cost and CO<sub>2</sub> savings!</h3>
-                    <p>We continuously optimize your asset across multiple electricity markets and for HVAC performance. We regularly report on your cost and CO<sub>2</sub> savings.</p>
+                    <ul>
+                        <li><i class="bi bi-check check-icon"></i>Continuous optimization</li>
+                        <li><i class="bi bi-check check-icon"></i>Revenue sharing model</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -2238,9 +2749,12 @@
                 <div class="sites-number">6</div>
                 <p class="sites-label">installations currently managed by ThermoShift</p>
             </div>
-            <p class="section-subtitle">Ready to contribute to the energy transition and cut your electricity costs? Let's discuss your project.</p>
+            <p class="section-subtitle">Ready to cut costs and emissions? Let's talk.</p>
             <div class="contact-content fade-in" style="text-align: center; margin-top: 40px;">
-                <a href="https://calendly.com/th-defauw/new-meeting" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a demo →</a>
+                <div class="cta-buttons">
+                    <a href="https://calendly.com/th-defauw/new-meeting" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a demo →</a>
+                    <a href="mailto:example@example.com" class="btn btn-secondary">Contact us →</a>
+                </div>
             </div>
         </div>
     </section>
@@ -2413,15 +2927,13 @@
             root.style.setProperty('--gradient-start', colors.gradientStart);
             root.style.setProperty('--gradient-end', colors.gradientEnd);
 
-            // Update html background gradients (single continuous background for all sections)
-            const dotColor = isLightMode ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.055)';
-            const ellipseOpacity = isLightMode ? '0.06' : '0.06';
+            // Update html background (dots only)
+            const dotColor = isLightMode ? 'rgba(0, 0, 0, 0.08)' : 'rgba(255, 255, 255, 0.07)';
             
             document.documentElement.style.backgroundImage = `
-                radial-gradient(circle at 1px 1px, ${dotColor} 1px, transparent 0),
-                radial-gradient(ellipse at top, rgba(${colors.rgba}, ${ellipseOpacity}) 0%, transparent 50%),
-                radial-gradient(ellipse at bottom, rgba(${colors.rgbaLight}, ${ellipseOpacity}) 0%, transparent 50%)
+                radial-gradient(circle at 1px 1px, ${dotColor} 1px, transparent 0)
             `;
+            document.documentElement.style.backgroundSize = '20px 20px';
 
             // Update battery fill gradient
             const batteryFill = document.querySelector('.battery-fill');
@@ -2554,6 +3066,16 @@
         const savedMode = localStorage.getItem('colorMode') || 'device';
         let currentMode = savedMode;
 
+        function updateProductImage() {
+            const productImage = document.getElementById('product-image');
+            if (productImage) {
+                const isDarkMode = document.documentElement.getAttribute('data-theme') === 'dark';
+                productImage.src = isDarkMode 
+                    ? 'operation_fielddata_feb12_2025_dark.png' 
+                    : 'operation_fielddata_feb12_2025.png';
+            }
+        }
+
         function updateModeUI() {
             let actualTheme;
             
@@ -2584,6 +3106,9 @@
             
             // Reapply theme to update background colors for the new mode
             applyTheme(currentTheme);
+            
+            // Update product image based on theme
+            updateProductImage();
         }
 
         modeToggle.addEventListener('click', (e) => {
@@ -2612,6 +3137,9 @@
 
         // Apply mode on page load
         updateModeUI();
+        
+        // Update product image on page load
+        updateProductImage();
 
         // Tech card cursor effect
         function initCursorEffect() {
